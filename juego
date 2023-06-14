@@ -1,0 +1,19 @@
+#juego listas
+import random
+
+numeros_elegidos = []
+
+for i in range(5):
+    numero = int(input("Ingrese un número: "))
+    numeros_elegidos.append(numero)
+
+print(f"Tus números elegidos son: {numeros_elegidos}")
+
+numeros_sorteo = random.sample(range(1, 50), 5)  
+print(f"Números del sorteo: {numeros_sorteo}")
+
+if set(numeros_elegidos) == set(numeros_sorteo):
+    print("¡Felicitaciones! Has ganado el sorteo.")
+else:
+    print("Lo siento, no has ganado el sorteo.")
+
